@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت‌ساز آنلاین</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎨 سایت‌ساز آنلاین</h1>
+        <div class="actions">
+            <button id="previewBtn">پیش‌نمایش</button>
+            <button id="exportBtn">دانلود HTML</button>
+            <button id="saveBtn">ذخیره</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- پنل تنظیمات -->
+        <aside class="sidebar">
+            <h3>تنظیمات</h3>
+            
+            <label>عنوان سایت:</label>
+            <input type="text" id="siteTitle" placeholder="نام سایت شما">
+
+            <label>رنگ اصلی:</label>
+            <input type="color" id="primaryColor" value="#3498db">
+
+            <label>رنگ پس‌زمینه:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+
+            <label>فونت:</label>
+            <select id="fontFamily">
+                <option value="Tahoma">Tahoma</option>
+                <option value="Arial">Arial</option>
+                <option value="Vazirmatn">Vazirmatn</option>
+            </select>
+
+            <hr>
+
+            <h3>بلوک‌ها</h3>
+            <button class="add-block" data-type="header">+ هدر</button>
+            <button class="add-block" data-type="text">+ متن</button>
+            <button class="add-block" data-type="image">+ تصویر</button>
+            <button class="add-block" data-type="button">+ دکمه</button>
+            <button class="add-block" data-type="gallery">+ گالری</button>
+        </aside>
+
+        <!-- بوم طراحی -->
+        <section class="canvas" id="canvas">
+            <div class="empty-hint">بلوک‌ها را از سمت راست اضافه کنید</div>
+        </section>
+    </main>
+
+    <!-- مودال پیش‌نمایش -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <button class="close" id="closePreview">✕</button>
+            <iframe id="previewFrame"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
